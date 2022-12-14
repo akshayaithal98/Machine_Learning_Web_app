@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Policy Amount</title>
+</head>
+<body>
+
+    <h1>Insurance Policy Amount</h1>
+    <form method="post" action="/predict">
+        <label>smoker</label><br>
+        <input type="text" name="smoker"><br><br>
+
+        <label>bmi</label><br>
+        <input type="text" name="bmi"><br><br>
+
+        <label>age</label><br>
+        <input type="text" name="age"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    {% if result %}
+    <p> Charges= {{result}} </p>
+    {% endif %}
+</body>
+</html>
